@@ -1,20 +1,6 @@
 import {createAppContainer} from 'react-navigation'
-import {HomeScreen} from './app/screens/home'
-import {ProfileScreen} from './app/screens/profile'
-import {SettingScreen} from './app/screens/setting'
-import {createStackNavigator} from 'react-navigation-stack'
-import {createBottomTabNavigator} from 'react-navigation-tabs'
+import {Navigator} from './app/navigation'
 
-const TabNavigator = createBottomTabNavigator({
-  Home: HomeScreen,
-  Profile: {
-    screen : createStackNavigator({
-      Profile: {screen: ProfileScreen},
-      Setting: {screen: SettingScreen}
-    })
-  },
-});
-
-const App = createAppContainer(TabNavigator);
+const App = createAppContainer(Navigator);
 
 export default App;
