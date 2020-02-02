@@ -1,5 +1,3 @@
-# tunas-mobile-app
-
 <h1>TUNAS MOBILE APP</h1>
 
 <h4>Yang diperlukan :</h4>
