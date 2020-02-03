@@ -1,12 +1,19 @@
-import React from 'react'
-import {createAppContainer} from 'react-navigation'
-import {Navigator} from './app/navigation'
-import LoginScreen from './app/screens/login/LoginScreen';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk'
+
+import RootReducer from './app/RootReducer';
+import TunasApp from './TunasApp';
+
+const store = createStore(RootReducer, applyMiddleware(thunk));
 
 class App extends React.Component {
 
     render(){
-        return <LoginScreen />
+        return <Provider store={ store }>
+                <TunasApp />
+            </Provider>
     }
 }
 

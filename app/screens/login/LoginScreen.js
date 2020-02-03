@@ -1,8 +1,12 @@
 import React from 'react'
-import { View, TouchableOpacity, TextInput, Text } from 'react-native'
+import { View, TouchableOpacity, TextInput, Text } from 'react-native';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+
 import Constants from '../../common/Constants';
 import Styles from './Styles';
 import Colors from '../../common/Colors';
+import { fetchLogin } from './Action'
 
 class LoginScreen extends React.Component {
 
@@ -15,7 +19,12 @@ class LoginScreen extends React.Component {
     }
 
     loginButtonPressed() {
-        console.log("Login button is pressed")
+        const paramsObj = {
+            username: this.state.username,
+            password: this.state.password
+        }
+        console.log(this.props)
+        this.props.fetchLogin(paramsObj)
     }
 
     render() {
@@ -53,4 +62,10 @@ class LoginScreen extends React.Component {
     }
 }
 
-export default LoginScreen
+const mapDispatchToProps = dispatch => bindActionCreators({fetchLogin}, dispatch);
+
+const mapStateToProps = state => ({
+    auth: state.auth
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);

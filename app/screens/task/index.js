@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, Button, View } from 'react-native'
 
-export class TaskScreen extends React.Component {
+export default class TaskScreen extends React.Component {
     static navigationOptions = {
         title: 'Task',
     };
