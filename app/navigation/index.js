@@ -1,6 +1,6 @@
 import { createStackNavigator } from 'react-navigation-stack'
 import { createBottomTabNavigator } from 'react-navigation-tabs'
-import { LoginScreen } from '../screens/login'
+import LoginScreen from '../screens/login/LoginScreen'
 import { DashboardScreen } from '../screens/dashboard'
 import { TaskSelectorScreen } from '../screens/taskSelector'
 import { TaskScreen } from '../screens/task'
