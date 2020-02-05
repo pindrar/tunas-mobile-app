@@ -23,7 +23,6 @@ class LoginScreen extends React.Component {
             username: this.state.username,
             password: this.state.password
         }
-        console.log(this.props)
         this.props.fetchLogin(paramsObj)
     }
 
@@ -34,7 +33,6 @@ class LoginScreen extends React.Component {
                     placeholder={Constants.USERNAME}
                     placeholderTextColor={Colors.WHITE}
                     style={Styles.textInput}
-                    keyboardType={Platform.OS === 'ios' ? 'ascii-capable' : 'email-address'}
                     onChangeText={(text) => this.setState({
                         username: text
                     })}
@@ -44,7 +42,6 @@ class LoginScreen extends React.Component {
                     placeholder={Constants.PASSWORD}
                     placeholderTextColor={Colors.WHITE}
                     style={[Styles.textInput, {marginTop: 20}]}
-                    keyboardType={Platform.OS === 'ios' ? 'ascii-capable' : 'email-address'}
                     onChangeText={(text) => this.setState({
                         password: text
                     })}

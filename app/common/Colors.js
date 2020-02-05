@@ -1,3 +1,4 @@
 export default {
-    WHITE: '#FFFFFF'
+    WHITE: '#FFFFFF',
+    GREYSCALE: '#B8B8B8'
 }
