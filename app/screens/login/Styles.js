@@ -5,7 +5,6 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: 'blue',
         justifyContent: 'center',
         alignItems: 'center',
         paddingLeft: 30,
@@ -26,6 +25,6 @@ export default StyleSheet.create({
         marginTop: 40,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: "#111E6C"
+        backgroundColor: "#192f6a"
     }
 });

@@ -10,7 +10,7 @@ import DashboardDetailsScreen from '../screens/dashboard/DashboardDetailsScreen'
 const getTabBarMenu = (menuName, imageIcon) => {
     return {
       tabBarLabel: menuName,
-      tabBarIcon: <Image source={imageIcon} style={{height: 25, resizeMode: 'contain'}} />
+      tabBarIcon: <Image source={imageIcon} style={{height: 25, resizeMode: 'contain', marginTop: 10}} />
   }
 }
 
@@ -19,14 +19,14 @@ const taskIcon = require('../assets/images/list.png')
 const chatIcon = require('../assets/images/chat.png')
 
 const DashboardStack = createStackNavigator({
-    Dashboard: { screen: DashboardScreen },
+    Dashboard: DashboardScreen,
     DashboardDetails: {screen: DashboardDetailsScreen}
 });
 
 DashboardStack.navigationOptions = getTabBarMenu("Dashboard", dashboardIcon);
 
 const TaskSelectorStack = createStackNavigator({
-    TaskSelector: { screen: TaskScreen }
+    TaskSelector: TaskScreen
 });
 
 TaskSelectorStack.navigationOptions = getTabBarMenu("Task", taskIcon);
